@@ -1,0 +1,1 @@
+http://api.smartsmssolutions.com/smsapi.php?username=YourUsername&password=YourPassword&sender=SenderID&recipient=234809xxxxxxx,2348030000000&message=YourMessage

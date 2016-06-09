@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Bowen University : Staff Post new Job</title>
+        
+        
+        <link rel="stylesheet" type="text/css" href="styles/css/fonts/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles/css/app_style.css" />
+        <link rel="stylesheet" type="text/css" href="styles/css/flight-manager.css" />
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/js.cookie.js"></script>
+    </head>
+    <body id="home-body">
+        
+        <div class="container-fluid"><!--Mother Container-->
+        
+            <header><!--Logo plus whatever-->
+                <div class="row staff-profile">
+                
+                        <div class="col-xs-12 text-center">
+                            <h1 class="center-block">
+                            <i class="fa fa-user fa-4x"></i>
+                            <br>
+                            <span>
+                            &nbsp;
+                            </span>
+                            <!--<img src="img/fine-bouy.jpg" class="img-circle" />-->
+                            </h1>
+                            
+                            
+                            <h1>
+                                <i class="fa fa-briefcase"></i>&nbsp;New Job
+                                
+                            </h1>
+                                                           
+                                               
+                    </div>
+                
+                </div>
+                </header><!--Logo plus whatever-->
+            
+          
+               <div class="clearfix">&nbsp;</div>
+                  
+            
+            
+              <section class="new_job_form"><!--Reg Form Student-->
+            <div class="row">
+                <div class="col-xs-12 col-md-9 col-md-offset-1">
+                            
+                    <form class="form" method="post" onsubmit="return false" id="new_job_form">
+                	
+                    <div class="form-group input-group input-group-lg">
+                        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                    <input type="text" class="form-control" name="job_title" maxlength="55" placeholder="Job Title" autofocus autocomplete="off" required />
+                    </div>
+                    
+                    
+                    
+                    <div class="form-group input-group input-group-lg">
+                              
+                        <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>                  
+                        <input type="date" class="form-control" name="latest_date" autocomplete="off" required/>
+                    </div>
+                        
+                        <div class="form-group form-group-lg">
+                   
+                        <select name="price_range" id="staffs_dept" class="form-control">
+                            <script type="text/javascript">
+                            
+                                var depts;
+                                depts = ["NGN0-1000", "NGN1001-5000","NGN5001 - 10000","NGN10001 - 20000"];
+                                
+                                for(q=0; q<depts.length; q++){
+                                    
+                                    $("#staffs_dept").append("<option value=" + depts[q] + ">" + depts[q] + "</option>");
+                                    
+                                }
+                                
+                            
+                            </script>
+                            </select>
+                    </div>
+                        
+                        
+                   <div class="form-group">
+                       <textarea class="form-control" name="job_details" required cols="20" placeholder="Job Details">
+                       </textarea>
+                    </div>
+                  
+                 
+                    
+                        <button type="submit" class="btn btn-lg btn-block"><i class="fa fa-check"></i>&nbsp;Post Job</button>
+                   
+                    
+                </form>
+                    
+                    <div class="clearfix">&nbsp;</div>
+                   
+                    <span id="reg_bg_process_status">...</span>
+                    
+                </div>
+                </div>
+            </section><!--Reg Form Student-->
+            
+            
+            
+            <section class="login-sticker"><!--Login Sticker-->
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                
+                     <a href="staffs_dashboard.html">
+                    <span class="glyphicon glyphicon-home"></span>&nbsp;Home   
+                    </a>
+                    
+                    &nbsp;&nbsp;
+                    
+                    <a href="logout.html">
+                    <span class="glyphicon glyphicon-lock"></span>&nbsp;Logout
+                    </a>
+                    
+                </div>
+                </div>
+            </section><!--Login Sticker-->
+                            
+            
+                </div><!--Mother Container-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/cordova_plugins.js"></script>
+        <script type="text/javascript" src="js/plug_script.js"></script>
+        <script type="text/javascript" src="js/plug_script_2.js"></script>
+        </body>
+</html>

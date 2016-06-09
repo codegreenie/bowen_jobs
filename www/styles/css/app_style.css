@@ -1,0 +1,193 @@
+*,
+table,
+form {
+  font-family: Candara, Calbri, Tahoma, Verdana;
+}
+a {
+  color: #069;
+}
+a:visited {
+  color: #069;
+}
+#home-body,
+#otp-body {
+  background-color: #fff;
+  background-image: url(../../img/ipqH.png);
+  color: #069;
+  margin-bottom: 70px;
+}
+#home-body a,
+#otp-body a {
+  color: #fff;
+}
+#home-body a:hover,
+#otp-body a:hover {
+  text-decoration: none;
+}
+.reg-form-student .btn,
+.category_chooser .btn,
+.new_job_form .btn {
+  padding: 10px 35px 10px 35px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -blink-border-radius: 20px;
+  border-radius: 20px;
+  background: none;
+  color: #069;
+  border: solid thin #069;
+}
+.reg-form-student .btn:hover,
+.category_chooser .btn:hover,
+.new_job_form .btn:hover {
+  color: #069;
+  border: solid thin #069;
+  background: none;
+}
+.reg-form-student .input-group-addon,
+.new_job_form .input-group-addon {
+  background: none;
+  box-shadow: none;
+  border: none;
+  color: #069;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border-bottom: solid thin #069;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -blink-border-radius: 0px;
+  border-radius: 0px;
+}
+.reg-form-student input,
+.new_job_form input,
+.reg-form-student input:focus,
+.new_job_form input:focus {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #069;
+  border-bottom: solid thin #069;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -blink-border-radius: 0px;
+  border-radius: 0px;
+}
+.reg-form-student textarea,
+.new_job_form textarea,
+.reg-form-student textarea:focus,
+.new_job_form textarea:focus {
+  background: transparent;
+  border: solid thin #069;
+  box-shadow: none;
+  color: #069;
+  border-bottom: solid thin #069;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -blink-border-radius: 0px;
+  border-radius: 0px;
+}
+.reg-form-student select,
+.new_job_form select,
+.reg-form-student select:focus,
+.new_job_form select:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border: solid thin #069;
+  color: #069;
+}
+option:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border: solid thin #fff;
+  color: #fff;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+:-moz-placeholder {
+  color: #fff;
+}
+::-moz-placeholder {
+  color: #fff;
+}
+:-ms-placeholder {
+  color: #fff;
+}
+:-o-placeholder {
+  color: #fff;
+}
+.otp_form input,
+.otp_form input:focus {
+  color: #069;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-bottom: solid thin #069;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -blink-border-radius: 0px;
+  border-radius: 0px;
+}
+.otp_form .input-group-addon {
+  background: none;
+  box-shadow: none;
+  border: none;
+  color: #069;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border-bottom: solid thin #069;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -blink-border-radius: 0px;
+  border-radius: 0px;
+}
+.otp_form .btn {
+  padding: 10px 35px 10px 35px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -blink-border-radius: 20px;
+  border-radius: 20px;
+  background: transparent;
+  color: #069;
+  border: solid thin #069;
+}
+.otp_form .btn:hover {
+  color: #069;
+  border: solid thin #069;
+  background: transparent;
+}
+section.login-sticker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: solid thin #069;
+  padding: 5px 0px 5px 0px;
+  margin: 50px 0px 0px 0px;
+  background-color: #fff;
+  z-index: 10;
+}
+section.login-sticker a {
+  color: #069 !important;
+}
+#reg_bg_process_status {
+  visibility: hidden;
+}
+.active_jobs li a,
+.pending_jobs li a,
+.students_active_jobs li a {
+  color: #069 !important;
+}
