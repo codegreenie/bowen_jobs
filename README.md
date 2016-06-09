@@ -1,4 +1,3 @@
-# bowen_jobs
 # Bowen Jobs PhoneGap Application [![bitHound Score][bithound-img]][bithound-url]
 
 App that lets Bowen Students get jobs
