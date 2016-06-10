@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+    
+    
+   
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Bowen University : Administator's Login</title>
+        
+        
+        <link rel="stylesheet" type="text/css" href="styles/css/fonts/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles/css/app_style.css" />
+        <link rel="stylesheet" type="text/css" href="styles/css/flight-manager.css" />
+        
+       
+    </head>
+    <body id="home-body">
+        
+        <div class="container-fluid"><!--Mother Container-->
+        
+            <header><!--Logo plus whatever-->
+                <div class="row">
+                
+                        <div class="col-xs-12 col-sm-9 col-sm-offset-1 text-center">
+                            
+                            <h3>
+                                <i class="fa fa-lock"></i>&nbsp;Admin Login
+                                
+                            </h3>
+                                                           
+                                               
+                    </div>
+                
+                </div>
+                </header><!--Logo plus whatever-->
+            
+          
+               <div class="clearfix">&nbsp;</div>
+                  
+            
+            
+              <section class="reg-form-student"><!--Reg Form Student-->
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-9 col-sm-offset-1">
+                            
+     <form class="form" method="post" onsubmit="return false" id="admin_login_form">
+                	
+                    <div class="form-group input-group input-group-lg">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    	<input type="text" class="form-control" name="admin_username" maxlength="35" placeholder="Username" autofocus autocomplete="off" required value="Username"/>
+                    </div>
+                    
+                    <div class="form-group input-group input-group-lg">
+                    	<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type="password" class="form-control" name="admin_passcode" maxlength="18" placeholder="Password" autocomplete="off" required value="Password"/>
+                    </div>
+                    
+       <button type="submit" class="btn btn-lg btn-block"><i class="fa fa-check"></i>&nbsp;Login</button>
+       <a href="spec/">Check Error</a>
+                   
+                    
+                </form>
+                    
+                    <div class="clearfix">&nbsp;</div>
+                   
+                    <span id="login_process_status">&nbsp;</span>
+                    
+                </div>
+                </div>
+            </section><!--Reg Form Student-->
+            
+            
+            
+            <section class="login-sticker"><!--Login Sticker-->
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                <span>
+                    <a href="index.html">
+                   Home  - Bowen Jobs<i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                        </span>
+                </div>
+                </div>
+            </section><!--Login Sticker-->
+                            
+            
+                </div><!--Mother Container-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/cordova_plugins.js"></script>
+        <script type="text/javascript" src="js/plug_script.js"></script>
+        <script type="text/javascript" src="js/plug_script_2.js"></script>
+        </body>
+</html>
