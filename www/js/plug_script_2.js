@@ -77,6 +77,29 @@ $(document).ready(function(){ //Document Ready
 			}
 		});
     
+    
+    
+    
+        $("#students_job_loader").html("loading...");
+		$.ajax({
+			
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/admin_available_jobs.php",
+			dataType : "html",
+			type : "GET",
+			cache : true,
+			crossDomain : true,
+			success : function(replyFrmServer){
+				console.log("File has been found!");
+				$(".admin_jobs_list").append(replyFrmServer);
+                 $("#students_job_loader").html("&nbsp;");
+				 
+			},
+			
+			error : function(jQXHR, error, status){
+				console.log("couldn\"t find file " + error + status);
+			}
+		});
+    
 	
 	
 	
@@ -198,6 +221,27 @@ $(document).ready(function(){ //Document Ready
 			
 		});
 		
+
+    
+    $("#admin_job_details_loader").html("loading...");
+		$.ajax({
+			
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/admin_job_details_loader.php",
+			dataType : "html",
+			type : "GET",
+			cache : true,
+			crossDomain : true,
+			success : function(replyFrmServer){
+				console.log("File has been found!");
+				$(".admin_current_job_details").append(replyFrmServer);
+                $("#admin_job_details_loader").html("&nbsp;");
+			},
+			
+			error : function(jQXHR, error, status){
+				console.log("couldn\"t find file " + error + status);
+			}
+			
+		});
 		
 		
 		

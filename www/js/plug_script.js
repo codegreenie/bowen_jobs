@@ -215,6 +215,50 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
 
 
 
+        
+        function adminCarryMe(numberReceived){
+			
+            $.ajax({
+			url :        "http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/cookie_setter.php",
+			dataType : "html",
+			type : "POST",
+			cache : true,
+            data : {"cookie2set" : numberReceived},
+			crossDomain : true,
+			success : function(replyFrmServer){
+                
+                if(replyFrmServer == "Successful"){
+                    window.location = "admin_job_details.html";
+                }
+                
+                else{
+                    
+                    alert(replyFrmServer);
+                }
+                
+            },
+                
+            error : function(jQXHR, errror, status){
+                
+                console.log(error + " " + status);
+                
+            }
+        
+            
+			
+		});
+			
+            
+            
+		}
+
+
+
+
+
+
+
+
 
         function carryMeStudent(numberReceived){
 			
@@ -266,7 +310,7 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
 			success : function(replyFrmServer){
 				if(replyFrmServer == 'deleted!'){
 					
-					Cookies.remove('current_job');
+					
 					window.location = 'ma_jobs.html';
 				}
 				
@@ -286,7 +330,37 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
 		}
 					
 					
+				function adminJobDeleter(){
 			
+		
+		$("#job_details_loader").html("Please wait...");
+		$.ajax({
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/job_deleter.php",
+			dataType : "html",
+			type : "GET",
+			cache : true,
+			crossDomain : true,
+			success : function(replyFrmServer){
+				if(replyFrmServer == 'deleted!'){
+					
+					alert("job deleted!");
+					window.location = 'admin_dashboard.html';
+				}
+				
+				else{
+					
+					alert(replyFrmServer);	
+						
+				}
+			},
+			
+			error : function(jQXHR, error, status){
+				console.log("couldn\"t find file " + error + status);
+			}
+		});
+			
+		
+		}
 			
 	function jobApprover(theBtn, theForm){
 			
@@ -304,6 +378,41 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
 					
 					$("#" + theBtn).text("Approved!");
 					$("#" + theBtn).attr("disabled","disabled");
+				}
+				
+				else{
+					
+					alert(replyFrmServer);	
+						
+				}
+			},
+			
+			error : function(jQXHR, error, status){
+				console.log("couldn\"t find file " + error + status);
+			}
+		});
+			
+		
+		}
+		
+
+
+            function adminJobApprover(theForm){
+			
+		
+		
+		$.ajax({
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/admin_job_approver.php",
+			dataType : "html",
+			type : "POST",
+			cache : true,
+			crossDomain : true,
+			data : $("#" + theForm).serialize(),
+			success : function(replyFrmServer){
+				if(replyFrmServer == 'Approved!'){
+					
+					alert("Job Approved");
+                    window.location = "admin_dashboard.html";
 				}
 				
 				else{
@@ -364,7 +473,56 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
 
     
 
+     $("#admin_login_form").on("submit", function(){
+                        
+                    
+                    $("#login_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
+                         $("#admin_login_form button").attr("disabled", "disabled");
+                $.ajax({
 
+                        type : "POST",
+                        cache : true,
+                        url : "http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/initiate_admin_login.php",
+                        crossDomain : true,
+                        data : $("#admin_login_form").serialize(),
+                        dataType : "html",
+                        success : function(themResponse){
+							
+							$("#login_process_status").html("<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...");
+							
+								if(themResponse == "Successful Admin"){
+								
+									window.location = "admin_dashboard.html";
+									$("#admin_login_form button").removeAttr("disabled");
+							}
+							
+							
+							
+							else{
+									
+								$("#login_process_status").html(themResponse);	
+								$("#admin_login_form button").removeAttr("disabled");
+								
+								
+							}
+							
+							
+						},
+						
+						error : function(jQXHR, error, status){
+							
+							console.log(error + " " + status);
+							$("#login_process_status").html("<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...");
+							$("#admin_login_form button").removeAttr("disabled");
+							
+						}
+			 
+			 }); //End of Ajax
+                        
+                    
+					
+		});
+		
 
 
        		
