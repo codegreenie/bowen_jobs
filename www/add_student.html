@@ -7,7 +7,7 @@
         <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <title>Bowen University : Staff registration</title>
+        <title>Bowen University : Admin | Add Student</title>
         
         
         <link rel="stylesheet" type="text/css" href="styles/css/fonts/bootstrap.min.css" />
@@ -26,7 +26,7 @@
                         <div class="col-xs-12 col-sm-9 col-sm-offset-1 text-center">
                             
                             <h1>
-                                <i class="fa fa-pencil"></i>&nbsp;Create account.
+                                Add a Student
                                 
                             </h1>
                                                            
@@ -45,59 +45,22 @@
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 col-sm-9 col-sm-offset-1">
                             
-                    <form class="form" method="post" onsubmit="return false" id="staffs_reg_form">
+                    <form class="form" method="post" onsubmit="return false" id="add_student_form">
                 	
                     <div class="form-group input-group input-group-lg">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    	<input type="text" class="form-control" name="staffs_name" maxlength="35" placeholder="Full Name" autofocus autocomplete="off" required />
+                    	<input type="text" class="form-control" name="students_phone_number" maxlength="35" placeholder="Phone number(2348***)" autofocus autocomplete="off" required/>
                     </div>
-                    
-                    
                     
                     <div class="form-group input-group input-group-lg">
-                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                       <input type="text" class="form-control" name="staffs_phone" placeholder="Phone(23480)" maxlength="13" autocomplete="off" required7/>
+                    	<span class="input-group-addon"><i class="fa fa-book"></i></span>
+                        <input type="text" class="form-control" name="students_matric_number" maxlength="18" placeholder="Matric No." autocomplete="off" required/>
                     </div>
-                        
-                        
-                        
-                    <div class="form-group input-group input-group-lg">
-                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                        <input type="text" class="form-control" name="staffs_card" placeholder="ID Crad no." maxlength="13" autocomplete="off" required/>
-                    </div>
-                        
-                 
-                        <div class="form-group input-group input-group-lg">
-                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                        <input type="text" class="form-control" name="staffs_position" placeholder="Position" maxlength="13" autocomplete="off" required/>
-                    </div>
-                        
-                        
-                        <div class="form-group form-group-lg">
+                    
                    
-                        <select name="staffs_dept" id="staffs_dept" class="form-control">
-                            <script type="text/javascript">
-                            
-                                var depts;
-                                depts = ["Computer Science", "Mathematics", "Agricultural Science","Medicine", "Political Science","Microbiology","BioChemistry","Animal Science"];
-                                
-                                for(q=0; q<depts.length; q++){
-                                    
-                                    $("#staffs_dept").append("<option value=" + depts[q] + ">" + depts[q] + "</option>");
-                                    
-                                }
-                                
-                            
-                            </script>
-                            </select>
-                    </div>
-                        
-                        
-                  
-                  
-                 
+                   
                     
-                        <button type="submit" class="btn btn-lg btn-block"><i class="fa fa-check"></i>&nbsp;Create</button>
+                        <button type="submit" class="btn btn-lg btn-block"><i class="fa fa-check"></i>&nbsp;Add</button>
                    
                     
                 </form>
@@ -116,8 +79,8 @@
             <div class="row">
                 <div class="col-xs-12 text-center">
                 <span>
-                    <a href="login.html">
-                    Have an account? Login <i class="fa fa-lock"></i>
+                    <a href="admin_dashboard.html">
+                   Home
                     </a>
                         </span>
                 </div>
