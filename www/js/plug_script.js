@@ -104,7 +104,26 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
                     });
 					
 					
-		
+		 
+$("#add_student_form").on("submit", function(){
+                    
+                         
+                    $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
+                         $("#add_student_form button") .attr("disabled", "disabled");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/add_student.php", "add_student_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "admin_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "add_student_form button");
+                        
+                    });
+
+$("#add_staff_form").on("submit", function(){
+                    
+                         
+                    $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
+                         $("#add_staff_form button") .attr("disabled", "disabled");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Bowen_Jobs/add_staff.php", "add_staff_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "admin_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "add_staff_form button");
+                        
+                    });
+
+
 		
 		$("#students_update_form").on("click", function(){
 			
