@@ -1,29 +1,27 @@
-@-blink-viewport{
-    width: device-width;
-    zoom : 1;
+@-blink-viewport {
+  width: device-width;
+  zoom: 1;
 }
-@-moz-viewport{
-    width: device-width;
-    zoom : 1;
+@-moz-viewport {
+  width: device-width;
+  zoom: 1;
 }
-@-webkit-viewport{
-    width: device-width;
-    zoom : 1;
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1;
 }
-@-o-viewport{
-    width: device-width;
-    zoom : 1;
+@-o-viewport {
+  width: device-width;
+  zoom: 1;
 }
-@-ms-viewport{
-    width: device-width;
-    zoom : 1;
+@-ms-viewport {
+  width: device-width;
+  zoom: 1;
 }
-@viewport{
-    width: device-width;
-    zoom : 1;
+@viewport {
+  width: device-width;
+  zoom: 1;
 }
-
-
 *,
 table,
 form {
@@ -40,6 +38,7 @@ a:visited {
   background-color: #fff;
   background-image: url(../../img/ipqH.png);
   color: #069;
+  opcity: 0.4;
   margin-bottom: 70px;
 }
 #home-body a,
