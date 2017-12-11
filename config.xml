@@ -2,7 +2,7 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>FPE WorkStudy</name>
     <description>
-        AN app to allow students take tasks from Staffs
+        An app to allow students take tasks from Staffs
     </description>
     <author email="codegreenie@gmail.com" href="https://instagram.com/codegreenie">
        @codegreenie
