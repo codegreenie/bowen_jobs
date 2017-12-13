@@ -3,23 +3,50 @@
   <div class="navbar theme-blue">
     <div class="navbar-inner">
         <div class="left"><a href="admindashboard.html" class="link icon-only"><i class="material-icons">arrow_back</i></a></div>
-        <div class="center">Students</div>
+        <div class="center">Student Profiles</div>
         <div class="right"><a href="#" class="link icon-only admin-logout-btn"><i class="material-icons">power_settings_new</i></a></div>
       </div>
   </div>
 
         <a href="addstudent.html" class="floating-button color-red"><i class="icon material-icons">add</i></a> 
+
+        <div class="toolbar tabbar tabbar-scrollable theme-blue">
+    <div class="toolbar-inner">
+      <a href="#tab1" class="tab-link active text-center">Active</a>
+      <a href="#tab2" class="tab-link text-center">Suspended</a>
+    </div>
+  </div>
+
        
 		<div class="page-content">			
                     
            
+      <div class="tabs swipeable"><!--tabs wrapper-->
 
-            <div class="content-block load-all-students">
+
+            <div id="tab1" class="content-block load-all-students tab active swipeable">
+
+
+                </div>
+
+
+
+                <div id="tab2" class="content-block load-all-suspended-students tab swipeable">
 
 
                 </div>
 
          
+
+
+
+
+      </div><!--tabs wrapper-->
+
+
+
+
+
          </div>
 
 

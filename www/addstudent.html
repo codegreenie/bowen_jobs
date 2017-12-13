@@ -3,7 +3,7 @@
   <div class="navbar theme-blue">
     <div class="navbar-inner">
       <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
-        <div class="center">Add Staff</div>
+        <div class="center">Add Student</div>
       </div>
   </div>
 
@@ -21,9 +21,22 @@
     <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label">Name</div>
+          <div class="item-title label">Full Name</div>
           <div class="item-input">
-            <input type="text" class="form-control" name="staffs_name" maxlength="35" placeholder="Full Name" autofocus autocomplete="off" required/>
+            <input type="text" class="form-control" name="students_name" maxlength="30" placeholder="Full Name" autofocus autocomplete="off" required/>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Matric</div>
+          <div class="item-input">
+            <input type="text" class="form-control" name="students_matric" maxlength="12" placeholder="Matric. No." autofocus autocomplete="off" required/>
           </div>
         </div>
       </div>
@@ -38,7 +51,7 @@
         <div class="item-inner">
           <div class="item-title label">Phone Number</div>
           <div class="item-input">
-           <input type="text" class="form-control" name="staffs_phone" placeholder="080xxxxxxxx)" maxlength="13" autocomplete="off" required />
+           <input type="text" class="form-control" name="students_phone" placeholder="080xxxxxxxx" maxlength="11" autocomplete="off" required />
           </div>
         </div>
       </div>
@@ -51,7 +64,25 @@
         <div class="item-inner">
           <div class="item-title label">Department</div>
           <div class="item-input">
-           <input type="text" class="form-control" name="staffs_dept" placeholder="" maxlength="13" autocomplete="off" required />
+           <input type="text" class="form-control" name="students_dept" placeholder="Department" maxlength="13" autocomplete="off" required />
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+     <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Level</div>
+          <div class="item-input">
+            <select name="students_level">
+              <option value="PRE-ND">PRE-ND</option>
+              <option value="ND1">ND1</option>
+              <option value="ND2">ND2</option>
+              <option value="HND1">HND1</option>
+              <option value="HND2">HND2</option>
+            </select>
           </div>
         </div>
       </div>
@@ -64,7 +95,7 @@
         <div class="item-inner">
           <div class="item-title label">Password</div>
           <div class="item-input">
-           <input type="password" class="form-control" name="staffs_password" placeholder="" maxlength="13" autocomplete="off" required />
+           <input type="password" class="form-control" name="students_password" placeholder="" maxlength="13" autocomplete="off" required />
           </div>
         </div>
       </div>
@@ -77,7 +108,7 @@
         <div class="item-inner">
           <!-- <div class="item-title label">Department</div> -->
           <div class="item-input">
-            <a href="#" class="link button button-fill color-blue" id="add-new-staff-btn">Submit</a>
+            <a href="#" class="link button button-fill color-blue" id="add-new-student-btn">Submit</a>
           </div>
         </div>
       </div>

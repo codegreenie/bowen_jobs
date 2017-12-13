@@ -8,7 +8,7 @@ $(document).ready(function(){ //Document Ready
     
     $.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/pull_username.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/pull_username.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -29,7 +29,7 @@ $(document).ready(function(){ //Document Ready
     
         $.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_pull_username.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_pull_username.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -60,7 +60,7 @@ $(document).ready(function(){ //Document Ready
 		$("#students_job_loader").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/available_jobs.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/available_jobs.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -83,7 +83,7 @@ $(document).ready(function(){ //Document Ready
         $("#students_job_loader").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/admin_available_jobs.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/admin_available_jobs.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -107,7 +107,7 @@ $(document).ready(function(){ //Document Ready
 	$("#profile_update_status").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/pull_students_profile.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/pull_students_profile.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -135,7 +135,7 @@ $(document).ready(function(){ //Document Ready
     $("#job_loader_1").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/ma_jobs_puller.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/ma_jobs_puller.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -159,7 +159,7 @@ $(document).ready(function(){ //Document Ready
     $("#job_loader_2").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/pending_jobs_puller.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/pending_jobs_puller.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -181,7 +181,7 @@ $(document).ready(function(){ //Document Ready
 		$("#job_details_loader").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_details_puller.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_details_puller.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -204,7 +204,7 @@ $(document).ready(function(){ //Document Ready
 		$("#students_job_details_loader").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_job_details_puller.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_job_details_puller.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -226,7 +226,7 @@ $(document).ready(function(){ //Document Ready
     $("#admin_job_details_loader").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/admin_job_details_loader.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/admin_job_details_loader.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -252,7 +252,7 @@ $(document).ready(function(){ //Document Ready
 		$("#job_applicants_loader").html("loading...");
 		$.ajax({
 			
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_applicants_puller.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_applicants_puller.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -273,7 +273,7 @@ $(document).ready(function(){ //Document Ready
     
     
 			/*$.ajax({
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/dp_puller.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/dp_puller.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,

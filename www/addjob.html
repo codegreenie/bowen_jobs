@@ -1,0 +1,104 @@
+ <div data-page="addjob" class="page">
+
+
+  <div class="navbar theme-blue">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+        <div class="center">New Job</div>
+         <div class="right"><a href="#" class="link icon-only admin-logout-btn"><i class="material-icons">power_settings_new</i></a></div>
+      </div>
+  </div>
+
+    
+
+
+<div class="page-content">
+
+<div class="content-block">
+ <form action="http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/add_new_job.php" method="post" class="ajax-submit add-new-job">
+           
+      <div class="list-block">
+
+  <ul class="theme-blue">
+    <!-- Text inputs -->
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Job Title</div>
+          <div class="item-input">
+            <input type="text" class="form-control" name="job_title" maxlength="30" placeholder="Job Title" autocomplete="off" required/>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <input type="hidden" name="staff_ID" value="" id="stf-id">
+
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Job Details</div>
+          <div class="item-input">
+            <textarea type="text" name="job_details" placeholder="job Details" required></textarea>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+   
+
+
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Price Pay</div>
+          <div class="item-input">
+           <input type="number" class="form-control" name="price_pay" placeholder="Price" maxlength="11" autocomplete="off" required />
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Latest Date</div>
+          <div class="item-input">
+           <input type="date" class="form-control" name="latest_date" placeholder="2017-12-13" maxlength="13" autocomplete="off" required />
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+
+
+   
+
+   
+
+   <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <!-- <div class="item-title label">Department</div> -->
+          <div class="item-input">
+            <a href="#" class="link button button-fill color-blue" id="add-job-btn">Submit</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+
+  </ul>
+
+</div>
+
+</form>
+
+
+
+
+</div></div></div>

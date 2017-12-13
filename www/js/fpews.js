@@ -200,9 +200,58 @@ myApp.onPageInit('admindashboard', function(page){
 
 
 
+myApp.onPageInit('addjob', function(page){
+
+
+		var stfId = window.localStorage.getItem("Staff_SN");
+		$$("#stf-id").val(stfId);
+
+		$$("#add-job-btn").on('click', function(e){
+
+					$$('form.add-new-job').trigger('submit');
+
+	});
+
+
+	$$('form.add-new-job').on('form:beforesend', function (e) {
+					  
+					  myApp.showPreloader(' ');
+	});
+
+
+	$$('form.add-new-job').on('form:error', function (e) {
+					  
+						myApp.hidePreloader();
+						myApp.alert("Network Error, Try again later");
+
+	});
+
+
+	$$('form.add-new-job').on('form:success', function (e) {
+					 
+		 var xhr = e.detail.xhr; // actual XHR object
+
+		 var data = e.detail.data; // Ajax response from action file
+		 
+		 myApp.hidePreloader();
+
+		 console.log(data);
+		
+		 	mainView.router.loadPage("staffdashboard.html");
+		 
+	});
 
 
 
+
+});
+
+
+
+
+
+
+var suspendStudent, deleteStudent, activateStudent;
 myApp.onPageInit('allstudents', function(page){
 
 			
@@ -217,12 +266,76 @@ myApp.onPageInit('allstudents', function(page){
 				});
 
 
+
+			$$.get("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/load_all_suspended_students.php", function(data){
+
+						$$(".load-all-suspended-students").html(data);
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+
+			suspendStudent = function(studentID){
+
+				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/suspend_student.php", {"student_id" : studentID}, function(data){
+
+						mainView.router.reloadPage("allstudents.html");
+
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+			}
+
+
+
+			activateStudent = function(studentID){
+
+				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/activate_student.php", {"student_id" : studentID}, function(data){
+
+						mainView.router.reloadPage("allstudents.html#tab2");
+
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+			}
+
+
+
+
+
+			deleteStudent = function(studentID){
+
+				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/delete_student.php", {"student_id" : studentID}, function(data){
+
+						mainView.router.reloadPage("allstudents.html");
+
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+			}
+
+
 });
 
 
 
 
 
+
+
+
+var suspendStaff, deleteStaff, activateStaff;
 myApp.onPageInit('allstaffs', function(page){
 
 			
@@ -235,6 +348,65 @@ myApp.onPageInit('allstaffs', function(page){
 					myApp.alert("Network Error, Try again.");
 
 				});
+
+
+			$$.get("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/load_all_suspended_staffs.php", function(data){
+
+						$$(".load-all-suspended-staffs").html(data);
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+
+			suspendStaff = function(staffSN){
+
+				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/suspend_staff.php", {"staff_sn" : staffSN}, function(data){
+
+						mainView.router.reloadPage("allstaffs.html");
+
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+			}
+
+
+
+
+			activateStaff = function(staffSN){
+
+				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/activate_staff.php", {"staff_sn" : staffSN}, function(data){
+
+						mainView.router.reloadPage("allstaffs.html#tab2");
+
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+			}
+
+
+
+
+			deleteStaff = function(staffSN){
+
+				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/delete_staff.php", {"staff_sn" : staffSN}, function(data){
+
+						mainView.router.reloadPage("allstaffs.html");
+
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+			}
 
 
 });
@@ -477,7 +649,7 @@ myApp.onPageInit('stafflogin', function(page){
 
 
 
-
+var loadJobApplications;
 myApp.onPageInit('staffdashboard', function(page){
 
 			
@@ -485,7 +657,7 @@ var staffSN = window.localStorage.getItem("Staff_SN");
 
 			$$.get("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/staff_jobs_puller.php", {'staff_sn' : staffSN},function(data){
 
-						$$(".load-staff-jobs").html(data);
+						$$(".load-staff-active-jobs").html(data);
 				}, function(){
 
 					myApp.alert("Network Error, Try again.");
@@ -493,7 +665,50 @@ var staffSN = window.localStorage.getItem("Staff_SN");
 				});
 
 
+
+			$$.get("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/staff_pending_jobs_puller.php", {'staff_sn' : staffSN},function(data){
+
+						$$(".load-staff-pending-jobs").html(data);
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+
+			loadJobApplications = function(jobSN){
+
+
+				$$.get("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_applicants_puller.php", {'job_sn' : jobSN},function(data){
+
+						window.localStorage.setItem("applicantsData", data);
+						mainView.router.loadPage("staffapplicants.html");
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+
+			}
+
 });
+
+
+
+
+
+myApp.onPageInit('staffapplicants', function(page){
+
+
+	var ApplicantsData = window.localStorage.getItem("applicantsData");
+	$$("#staff-job-applicants-loader").html(ApplicantsData);
+
+
+
+});
+
+
 
 
 

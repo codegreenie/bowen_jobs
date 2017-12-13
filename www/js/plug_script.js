@@ -50,7 +50,7 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
                         $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                         $("#students_reg_form button") .attr("disabled", "disabled");
                         
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/reg_processor.php", "students_reg_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "apply_otp.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls..", "students_reg_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/reg_processor.php", "students_reg_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "apply_otp.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls..", "students_reg_form button");
                         
                     });
 
@@ -63,7 +63,7 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
                          
                         $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                          $("#otp_pin_form button") .attr("disabled", "disabled");
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/otp_update.php", "otp_pin_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "students_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "otp_pin_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/otp_update.php", "otp_pin_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "students_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "otp_pin_form button");
                         
                     });
 					
@@ -75,7 +75,7 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
                          
                         $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                          $("#staffs_reg_form button") .attr("disabled", "disabled");
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/staffs_reg_processor.php", "staffs_reg_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "staff_apply_otp.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "staffs_reg_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/staffs_reg_processor.php", "staffs_reg_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "staff_apply_otp.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "staffs_reg_form button");
                         
                     });
 
@@ -87,7 +87,7 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
                          
                     $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                          $("#staff_otp_pin_form button") .attr("disabled", "disabled");
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/staff_otp_update.php", "staff_otp_pin_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "staffs_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "staff_otp_pin_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/staff_otp_update.php", "staff_otp_pin_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "staffs_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "staff_otp_pin_form button");
                         
                     });
 
@@ -99,7 +99,7 @@ function pushData(theUrl, theForm2Serialize, statusMonitor, successMsg, successT
                          
                     $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                          $("#new_job_form button") .attr("disabled", "disabled");
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_post.php", "new_job_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "ma_jobs.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "new_job_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_post.php", "new_job_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "ma_jobs.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "new_job_form button");
                         
                     });
 					
@@ -110,7 +110,7 @@ $("#add_student_form").on("submit", function(){
                          
                     $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                          $("#add_student_form button") .attr("disabled", "disabled");
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/add_student.php", "add_student_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "admin_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "add_student_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/add_student.php", "add_student_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "admin_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "add_student_form button");
                         
                     });
 
@@ -119,7 +119,7 @@ $("#add_staff_form").on("submit", function(){
                          
                     $("#reg_bg_process_status").css({"visibility" : "visible"}).html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                          $("#add_staff_form button") .attr("disabled", "disabled");
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/add_staff.php", "add_staff_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "admin_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "add_staff_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/add_staff.php", "add_staff_form", "reg_bg_process_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "admin_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "add_staff_form button");
                         
                     });
 
@@ -135,7 +135,7 @@ $("#add_staff_form").on("submit", function(){
               function indirectUpdate(){           
                     $("#profile_update_status").html("<span class='glyphicon glyphicon-time'></span>&nbsp;Please wait...");
                          $("#students_update_form button") .attr("disabled", "disabled");
-                        pushData("http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_profile_updater.php", "students_update_form", "profile_update_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "students_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "students_update_form button");
+                        pushData("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_profile_updater.php", "students_update_form", "profile_update_status", "<span class='glyphicon glyphicon-time'></span>&nbsp;One moment please...", "students_dashboard.html", "<i class='fa fa-times'></i>&nbsp;An error occured! Try again pls...", "students_update_form button");
 			  }
 					
 					
@@ -149,7 +149,7 @@ $("#add_staff_form").on("submit", function(){
 
                         type : "POST",
                         cache : true,
-                        url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/initiate_login.php",
+                        url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/initiate_login.php",
                         crossDomain : true,
                         data : $("#user_login_form").serialize(),
                         dataType : "html",
@@ -198,7 +198,7 @@ $("#add_staff_form").on("submit", function(){
 		function carryMe(numberReceived){
 			
             $.ajax({
-			url :        "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/cookie_setter.php",
+			url :        "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/cookie_setter.php",
 			dataType : "html",
 			type : "POST",
 			cache : true,
@@ -238,7 +238,7 @@ $("#add_staff_form").on("submit", function(){
         function adminCarryMe(numberReceived){
 			
             $.ajax({
-			url :        "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/cookie_setter.php",
+			url :        "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/cookie_setter.php",
 			dataType : "html",
 			type : "POST",
 			cache : true,
@@ -282,7 +282,7 @@ $("#add_staff_form").on("submit", function(){
         function carryMeStudent(numberReceived){
 			
             $.ajax({
-			url :        "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/cookie_setter.php",
+			url :        "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/cookie_setter.php",
 			dataType : "html",
 			type : "POST",
 			cache : true,
@@ -321,7 +321,7 @@ $("#add_staff_form").on("submit", function(){
 		
 		$("#job_details_loader").html("Please wait...");
 		$.ajax({
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_deleter.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_deleter.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -354,7 +354,7 @@ $("#add_staff_form").on("submit", function(){
 		
 		$("#job_details_loader").html("Please wait...");
 		$.ajax({
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_deleter.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_deleter.php",
 			dataType : "html",
 			type : "GET",
 			cache : true,
@@ -386,7 +386,7 @@ $("#add_staff_form").on("submit", function(){
 		
 		$("#" + theBtn).text("Approving...");
 		$.ajax({
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_approver.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/job_approver.php",
 			dataType : "html",
 			type : "POST",
 			cache : true,
@@ -421,7 +421,7 @@ $("#add_staff_form").on("submit", function(){
 		
 		
 		$.ajax({
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/admin_job_approver.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/admin_job_approver.php",
 			dataType : "html",
 			type : "POST",
 			cache : true,
@@ -459,7 +459,7 @@ $("#add_staff_form").on("submit", function(){
 			
 			$("#" + theBtn).val("Approving...");
 			$.ajax({
-			url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_job_applicator.php",
+			url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/students_job_applicator.php",
 			dataType : "html",
 			type : "POST",
 			cache : true,
@@ -501,7 +501,7 @@ $("#add_staff_form").on("submit", function(){
 
                         type : "POST",
                         cache : true,
-                        url : "http://localhost/Mobile_app_repo/php_hub/_Fpe_Work_Study/initiate_admin_login.php",
+                        url : "http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/initiate_admin_login.php",
                         crossDomain : true,
                         data : $("#admin_login_form").serialize(),
                         dataType : "html",
