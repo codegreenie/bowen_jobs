@@ -730,10 +730,12 @@ var stdSN = window.localStorage.getItem("student_SN");
 				});
 
 
-			applyStudent = function(jobSN, stdSN){
+			applyStudent = function(jobSN){
+
+			
 
 				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/apply_student.php", {"students_sn" : stdSN, "job_sn" : jobSN}, function(data){
-
+						myApp.alert(data);
 						mainView.router.reloadPage("studentdashboard.html");
 				}, function(){
 
