@@ -713,13 +713,14 @@ myApp.onPageInit('staffapplicants', function(page){
 
 
 
-
+var applyStudent;
 myApp.onPageInit('studentdashboard', function(page){
 
 			
-var staffSN = window.localStorage.getItem("Staff_SN");
 
-			$$.get("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/student_job_puller.php", function(data){
+var stdSN = window.localStorage.getItem("student_SN");
+
+			$$.get("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/student_job_puller.php", {"students_sn" : stdSN}, function(data){
 
 						$$(".load-student-jobs").html(data);
 				}, function(){
@@ -728,6 +729,21 @@ var staffSN = window.localStorage.getItem("Staff_SN");
 
 				});
 
+
+			applyStudent = function(jobSN, stdSN){
+
+				$$.post("http://tmlng.com/Mobile_app_repo/php_hub/_Fpe_Work_Study/apply_student.php", {"students_sn" : stdSN, "job_sn" : jobSN}, function(data){
+
+						mainView.router.reloadPage("studentdashboard.html");
+				}, function(){
+
+					myApp.alert("Network Error, Try again.");
+
+				});
+
+
+
+			}
 
 });
 
