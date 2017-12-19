@@ -801,7 +801,15 @@ myApp.onPageInit('studentlogin', function(page){
 		 }
 		 else{
 
+
 		 	window.localStorage.setItem("student_SN", datas2.student_sn);
+		 	window.localStorage.setItem("student_full_name", datas2.student_full_name);
+		 	window.localStorage.setItem("student_username", datas2.student_username);
+		 	window.localStorage.setItem("student_phone_num", datas2.student_phone_num);
+		 	window.localStorage.setItem("student_dept", datas2.student_dept);
+		 	window.localStorage.setItem("student_level", datas2.student_level);
+		 	window.localStorage.setItem("student_password", datas2.student_password);
+
 		 	mainView.router.loadPage("studentdashboard.html");
 		 }
 
@@ -813,3 +821,63 @@ myApp.onPageInit('studentlogin', function(page){
 
 });
 
+
+
+
+
+
+
+myApp.onPageInit('studentprofile', function(page){
+
+	$$("#update-sn").html(window.localStorage.getItem("student_SN"));
+
+	$$("#update-sn").val(window.localStorage.getItem("student_SN"));
+ 	$$("#update-full-name").val(window.localStorage.getItem("student_full_name"));
+ 	$$("#update-matric-no").val(window.localStorage.getItem("student_username"));
+ 	$$("#update-phone").val(window.localStorage.getItem("student_phone_num"));
+ 	$$("#update-department").val(window.localStorage.getItem("student_dept"));
+ 	$$("#update-level").val(window.localStorage.getItem("student_level"));
+ 	$$("#update-passcode").val(window.localStorage.getItem("student_password"));
+
+	$$("#student-update-btn").on('click', function(e){
+
+					$$('form.student-profile-update').trigger('submit');
+
+	});
+
+
+	$$('form.student-profile-update').on('form:beforesend', function (e) {
+					  
+					  myApp.showPreloader(' ');
+	});
+
+
+	$$('form.student-profile-update').on('form:error', function (e) {
+					  
+						myApp.hidePreloader();
+						myApp.alert("Network Error, Try again later");
+
+	});
+
+
+	$$('form.student-profile-update').on('form:success', function (e) {
+					 
+		 
+		 var xhr = e.detail.xhr; // actual XHR object
+		 var data = e.detail.data; // Ajax response from action file
+		 
+		 myApp.hidePreloader();
+		 if(data == "Done"){
+
+		 	mainView.router.loadPage("studentdashboard.html");
+		 }
+		 else{
+
+		 	myApp.alert(data);
+		 }
+
+	});
+
+
+
+});
